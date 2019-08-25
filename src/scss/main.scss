@@ -1,5 +1,9 @@
 @import "_normalize";
 @import "_variables";
+@import "_header";
+@import "_navigation";
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 
 
 html {
@@ -11,6 +15,7 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  color: $main;
+  background: $main;
+  font-family: 'Lato', sans-serif;
 }
