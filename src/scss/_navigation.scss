@@ -73,21 +73,24 @@
 
 }
 
-.hamburger__container{
+.hamburger{
+  &__container{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 30px;
     height: 25px;
+    &:focus {
+      outline: none;
+    }
   }
-
-  .hamburger__bars{
+  &__bars{
     position: absolute;
     width: 30px;
     height: 2px;
-     background: $main;
-    transition: transform 220ms ease-in-out;
+    background: $main;
+    transition: transform 220ms 120ms ease-in-out;
 
     &::before,
     &::after{
@@ -102,39 +105,33 @@
 
     &::before{
         top: 10px;
+        transition: top 100ms 250ms ease-in, 
+        transform 220ms ease-in-out;
     }
 
     &::after{
         top: -10px;
+        transition: bottom 100ms 250ms ease-in, 
+        transform 220ms ease-in-out;
     }
-  }
-
-  .hamburger, .hamburger__container {
     &:focus {
       outline: none;
     }
-  }
+}
+}
 
-  
-  .hamburger--active {
-    z-index: 101;
-    background-color: transparent;
-    .hamburger__bars {
-      transform: rotate(225deg);
-      transition: transform 220ms 120ms ease-in-out;
-      &:before {
-        top: 0;
-        transition: top 100ms ease-out;
-        background: #222;
-      }
-      &:after {
-        bottom: 0;
-        transform: rotate(-90deg);
-        transition: bottom 100ms ease-out, 
-          transform 220ms 120ms ease-in-out;
-          background: #222;
-      }
+.hamburger--active {
+  z-index: 101;
+  background-color: transparent;
+  .hamburger__bars {
+    transform: rotate(225deg);
+    &:before {
+      top: 0;
+      transform: rotate(-90deg);
+    }
+    &:after {
+      top: 0;
+      transform: rotate(90deg);
     }
   }
-
- 
+}
