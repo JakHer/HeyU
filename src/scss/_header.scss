@@ -2,4 +2,66 @@
     background: url("../assets/img/header.svg");
     height: 950px;
     width: 100%;
+
+    .header-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 1200px;
+        margin: 90px auto 0;
+        &__img{
+            /* Style for "iPhone 7 S" */
+            height: 750px;
+            width: auto;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            &--header{
+                font-size: 4.5rem;
+                font-weight: 700;
+                letter-spacing: 2.92px;
+                margin: 90px 0 0;
+                padding: 0;
+            }
+            &--paragraph{
+                margin: 50px 0 0 0;
+                font-size: 1.5rem;
+                font-weight: 300;
+                line-height: 28px;
+            }
+            &-button{
+                margin: 100px 0 0;
+                padding: 0;
+                /* Style for "Rounded Re" */
+                max-width: 300px;
+                height: 50px;
+                box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
+                border-radius: 25px;
+                background-color: $main;
+                border: none;
+                &--link{
+                    color: #363636;
+                    background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    padding: 20px 50px;
+                }
+            }
+        }
+    }
+}    
+    
+.highlight{
+    font-weight: 700;
 }
+
