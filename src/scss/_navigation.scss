@@ -14,6 +14,10 @@
         justify-content: center;
         align-items: center;
         margin: 0;
+
+        &--active{
+          display: flex;
+        }
   
         @media (max-width: 900px) {
                 display: none;
@@ -134,4 +138,8 @@
       transform: rotate(90deg);
     }
   }
+}
+
+[class="navigation__list--active"] ul{
+  display: flex;
 }

@@ -109,3 +109,11 @@
     font-weight: 700;
 }
 
+.slideIn{
+    animation: slideIn .4s linear 1;
+}
+
+.slideOut{
+    animation: slideOut .4s linear 1;
+}
+
