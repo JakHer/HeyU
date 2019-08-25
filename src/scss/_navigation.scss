@@ -1,17 +1,6 @@
 .navigation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__logo{
-        font-size: 3.125rem;
-        padding: 40px 0 0 40px ;
-        margin: 0;
-        font-weight: 700;
-        margin: 0;
-        @media (max-width: 900px) {
-            font-size: 2rem;
-        }
+    @media (max-width: 900px ){
+        display: none;
     }
     &__list{
         display: flex;
@@ -41,8 +30,52 @@
             opacity: 1;
             text-decoration: line-through;
         }
-        &--active{
-            text-decoration: line-through;
+    }
+    &__button{
+        display: none;
+        @media (max-width: 900px) {
+            display: block;
+            cursor: pointer;
+            margin: 40px 40px 0 0;
+            border: none;
+            background-color: transparent;
+            border-radius: 10px;
         }
     }
+
 }
+
+.hamburger__container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 25px;
+  }
+
+  .hamburger__bars{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+     background: $main;
+    transition: transform 220ms ease-in-out;
+  }
+
+.hamburger__bars::before,
+.hamburger__bars::after{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: $main;
+  content: '';
+  top: 0;
+}
+
+.hamburger__bars::after{
+   top: 10px;
+}
+
+.hamburger__bars::before{
+    top: -10px;
+ }
