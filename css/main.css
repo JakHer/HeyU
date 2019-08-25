@@ -531,17 +531,19 @@ template {
   position: relative;
   width: 30px;
   height: 25px; }
+  .hamburger__container:focus {
+    outline: none; }
 
 .hamburger__bars {
   position: absolute;
   width: 30px;
   height: 2px;
   background: #ffffff;
-  -webkit-transition: -webkit-transform 220ms ease-in-out;
-  transition: -webkit-transform 220ms ease-in-out;
-  -o-transition: transform 220ms ease-in-out;
-  transition: transform 220ms ease-in-out;
-  transition: transform 220ms ease-in-out, -webkit-transform 220ms ease-in-out; }
+  -webkit-transition: -webkit-transform 220ms 120ms ease-in-out;
+  transition: -webkit-transform 220ms 120ms ease-in-out;
+  -o-transition: transform 220ms 120ms ease-in-out;
+  transition: transform 220ms 120ms ease-in-out;
+  transition: transform 220ms 120ms ease-in-out, -webkit-transform 220ms 120ms ease-in-out; }
   .hamburger__bars::before, .hamburger__bars::after {
     display: block;
     position: absolute;
@@ -551,12 +553,21 @@ template {
     content: '';
     top: 0; }
   .hamburger__bars::before {
-    top: 10px; }
+    top: 10px;
+    -webkit-transition: top 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
+    transition: top 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
+    -o-transition: top 100ms 250ms ease-in,  transform 220ms ease-in-out;
+    transition: top 100ms 250ms ease-in,  transform 220ms ease-in-out;
+    transition: top 100ms 250ms ease-in,  transform 220ms ease-in-out,  -webkit-transform 220ms ease-in-out; }
   .hamburger__bars::after {
-    top: -10px; }
-
-.hamburger:focus, .hamburger__container:focus {
-  outline: none; }
+    top: -10px;
+    -webkit-transition: bottom 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
+    transition: bottom 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
+    -o-transition: bottom 100ms 250ms ease-in,  transform 220ms ease-in-out;
+    transition: bottom 100ms 250ms ease-in,  transform 220ms ease-in-out;
+    transition: bottom 100ms 250ms ease-in,  transform 220ms ease-in-out,  -webkit-transform 220ms ease-in-out; }
+  .hamburger__bars:focus {
+    outline: none; }
 
 .hamburger--active {
   z-index: 101;
@@ -564,29 +575,17 @@ template {
   .hamburger--active .hamburger__bars {
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
-            transform: rotate(225deg);
-    -webkit-transition: -webkit-transform 220ms 120ms ease-in-out;
-    transition: -webkit-transform 220ms 120ms ease-in-out;
-    -o-transition: transform 220ms 120ms ease-in-out;
-    transition: transform 220ms 120ms ease-in-out;
-    transition: transform 220ms 120ms ease-in-out, -webkit-transform 220ms 120ms ease-in-out; }
+            transform: rotate(225deg); }
     .hamburger--active .hamburger__bars:before {
       top: 0;
-      -webkit-transition: top 100ms ease-out;
-      -o-transition: top 100ms ease-out;
-      transition: top 100ms ease-out;
-      background: #222; }
-    .hamburger--active .hamburger__bars:after {
-      bottom: 0;
       -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
-              transform: rotate(-90deg);
-      -webkit-transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
-      transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
-      -o-transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out;
-      transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out;
-      transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out,  -webkit-transform 220ms 120ms ease-in-out;
-      background: #222; }
+              transform: rotate(-90deg); }
+    .hamburger--active .hamburger__bars:after {
+      top: 0;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg); }
 
 html {
   -webkit-box-sizing: border-box;
