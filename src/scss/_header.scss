@@ -6,12 +6,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 10;
     padding: 40px;
 
     @media (max-width:900px) {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__logo{
@@ -23,6 +24,9 @@
         left: 0;
         z-index: 11;
         position: relative;
+        @media (max-width: 900px) {
+            font-size: 2rem;
+        }
     }
 }    
 
