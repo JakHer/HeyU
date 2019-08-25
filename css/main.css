@@ -339,9 +339,6 @@ template {
     left: 0;
     z-index: 11;
     position: relative; }
-    @media (max-width: 900px) {
-      .header__logo {
-        font-size: 2rem; } }
 
 .header-container {
   display: -webkit-box;
