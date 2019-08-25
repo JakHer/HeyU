@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    background: #DA0946;
+    padding: 40px;
 
     @media (max-width:900px) {
         justify-content: space-between;
@@ -16,13 +16,13 @@
 
     &__logo{
         font-size: 3.125rem;
-        padding: 40px 0 0 40px ;
         margin: 0;
         font-weight: 700;
         margin: 0;
         top: 0;
         left: 0;
         z-index: 11;
+        position: relative;
         @media (max-width: 900px) {
             font-size: 2rem;
         }
@@ -47,7 +47,6 @@
         /* Style for "iPhone 7 S" */
         height: 750px;
         width: auto;
-
         @media (max-width: 900px) {
             display: none;
         }
@@ -68,6 +67,8 @@
             letter-spacing: 2.92px;
             margin: 110px 0 0;
             padding: 0;
+            width: 100%;
+            max-width: 420px;
         }
         &--paragraph{
             margin: 50px 0 0 0;
