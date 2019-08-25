@@ -309,80 +309,11 @@ template {
   display: none; }
 
 .header {
-  background: url("../assets/img/header.svg");
-  height: 950px;
-  width: 100%; }
-  .header .header-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 90%;
-    max-width: 1200px;
-    margin: 90px auto 0; }
-    .header .header-container__img {
-      /* Style for "iPhone 7 S" */
-      height: 750px;
-      width: auto; }
-    .header .header-container__text {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .header .header-container__text--header {
-        font-size: 4.5rem;
-        font-weight: 700;
-        letter-spacing: 2.92px;
-        margin: 90px 0 0;
-        padding: 0; }
-      .header .header-container__text--paragraph {
-        margin: 50px 0 0 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 28px; }
-      .header .header-container__text-button {
-        margin: 100px 0 0;
-        padding: 0;
-        /* Style for "Rounded Re" */
-        max-width: 300px;
-        height: 50px;
-        -webkit-box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
-                box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
-        border-radius: 25px;
-        background-color: #ffffff;
-        border: none; }
-        .header .header-container__text-button--link {
-          color: #363636;
-          background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
-          background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
-          background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
-          background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
-          font-size: 1.125rem;
-          font-weight: 700;
-          text-decoration: none;
-          padding: 20px 50px; }
-
-.highlight {
-  font-weight: 700; }
-
-.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,13 +322,126 @@ template {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-  .navigation__logo {
+          align-items: center;
+  z-index: 10;
+  background: #DA0946; }
+  @media (max-width: 900px) {
+    .header {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  .header__logo {
     font-size: 3.125rem;
     padding: 40px 0 0 40px;
     margin: 0;
     font-weight: 700;
-    margin: 0; }
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 11; }
+    @media (max-width: 900px) {
+      .header__logo {
+        font-size: 2rem; } }
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  background: url("../assets/img/header.svg") center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 200px 20px 0; }
+  @media (max-width: 900px) {
+    .header-container {
+      padding: 40px 20px 0; } }
+  .header-container__img {
+    /* Style for "iPhone 7 S" */
+    height: 750px;
+    width: auto; }
+    @media (max-width: 900px) {
+      .header-container__img {
+        display: none; } }
+  .header-container__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 900px) {
+      .header-container__text {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center; } }
+    .header-container__text--header {
+      font-size: 4.5rem;
+      font-weight: 700;
+      letter-spacing: 2.92px;
+      margin: 110px 0 0;
+      padding: 0; }
+    .header-container__text--paragraph {
+      margin: 50px 0 0 0;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 28px; }
+    .header-container__text-button {
+      margin: 100px 0 0;
+      padding: 0;
+      /* Style for "Rounded Re" */
+      max-width: 300px;
+      height: 50px;
+      -webkit-box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
+              box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
+      border-radius: 25px;
+      background-color: #ffffff;
+      border: none; }
+      @media (max-width: 900px) {
+        .header-container__text-button {
+          margin: 100px 30px 200px; } }
+      .header-container__text-button--link {
+        color: #363636;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
+        background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+        background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+        background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+        font-size: 1.125rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 20px 50px; }
+
+.highlight {
+  font-weight: 700; }
+
+.navigation {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 900px) {
+    .navigation {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2; } }
   .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -414,8 +458,30 @@ template {
             align-items: center;
     padding: 40px 40px 0 0;
     margin: 0; }
+    @media (max-width: 900px) {
+      .navigation__list {
+        display: none;
+        height: 100vh;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%;
+        background: #DA0946;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        font-size: 2rem;
+        padding: 0; } }
+    .navigation__list--active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .navigation__item {
     list-style-type: none; }
+    @media (max-width: 900px) {
+      .navigation__item {
+        padding: 20px 0; } }
   .navigation__link {
     cursor: pointer;
     text-decoration: none;
@@ -428,15 +494,99 @@ template {
     -webkit-transition: .4s all;
     -o-transition: .4s all;
     transition: .4s all; }
+    @media (max-width: 900px) {
+      .navigation__link {
+        font-size: 3rem;
+        padding: 20px 0;
+        margin: 0; } }
     .navigation__link:hover {
       opacity: 1;
       text-decoration: line-through; }
-    .navigation__link--active {
-      text-decoration: line-through; }
+  .navigation__button {
+    display: none; }
+    @media (max-width: 900px) {
+      .navigation__button {
+        display: block;
+        cursor: pointer;
+        margin: 40px 40px 0 0;
+        border: none;
+        background-color: transparent;
+        border-radius: 10px;
+        z-index: 11; } }
+
+.hamburger__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 30px;
+  height: 25px; }
+
+.hamburger__bars {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #ffffff;
+  -webkit-transition: -webkit-transform 220ms ease-in-out;
+  transition: -webkit-transform 220ms ease-in-out;
+  -o-transition: transform 220ms ease-in-out;
+  transition: transform 220ms ease-in-out;
+  transition: transform 220ms ease-in-out, -webkit-transform 220ms ease-in-out; }
+  .hamburger__bars::before, .hamburger__bars::after {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    content: '';
+    top: 0; }
+  .hamburger__bars::before {
+    top: 10px; }
+  .hamburger__bars::after {
+    top: -10px; }
+
+.hamburger:focus, .hamburger__container:focus {
+  outline: none; }
+
+.hamburger--active {
+  z-index: 101;
+  background-color: transparent; }
+  .hamburger--active .hamburger__bars {
+    -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+            transform: rotate(225deg);
+    -webkit-transition: -webkit-transform 220ms 120ms ease-in-out;
+    transition: -webkit-transform 220ms 120ms ease-in-out;
+    -o-transition: transform 220ms 120ms ease-in-out;
+    transition: transform 220ms 120ms ease-in-out;
+    transition: transform 220ms 120ms ease-in-out, -webkit-transform 220ms 120ms ease-in-out; }
+    .hamburger--active .hamburger__bars:before {
+      top: 0;
+      -webkit-transition: top 100ms ease-out;
+      -o-transition: top 100ms ease-out;
+      transition: top 100ms ease-out;
+      background: #222; }
+    .hamburger--active .hamburger__bars:after {
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
+      transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
+      -o-transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out;
+      transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out;
+      transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out,  -webkit-transform 220ms 120ms ease-in-out;
+      background: #222; }
 
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media (max-width: 500px) {
+    html {
+      font-size: .8rem; } }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -445,6 +595,7 @@ html {
 body {
   color: #ffffff;
   background: #ffffff;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=main.css.map */
