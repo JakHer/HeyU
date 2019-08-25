@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -307,6 +308,132 @@ template {
 [hidden] {
   display: none; }
 
+.header {
+  background: url("../assets/img/header.svg");
+  height: 950px;
+  width: 100%; }
+  .header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 90px auto 0; }
+    .header .header-container__img {
+      /* Style for "iPhone 7 S" */
+      height: 750px;
+      width: auto; }
+    .header .header-container__text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .header .header-container__text--header {
+        font-size: 4.5rem;
+        font-weight: 700;
+        letter-spacing: 2.92px;
+        margin: 90px 0 0;
+        padding: 0; }
+      .header .header-container__text--paragraph {
+        margin: 50px 0 0 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 28px; }
+      .header .header-container__text-button {
+        margin: 100px 0 0;
+        padding: 0;
+        /* Style for "Rounded Re" */
+        max-width: 300px;
+        height: 50px;
+        -webkit-box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
+                box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
+        border-radius: 25px;
+        background-color: #ffffff;
+        border: none; }
+        .header .header-container__text-button--link {
+          color: #363636;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
+          background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+          background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+          background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+          font-size: 1.125rem;
+          font-weight: 700;
+          text-decoration: none;
+          padding: 20px 50px; }
+
+.highlight {
+  font-weight: 700; }
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .navigation__logo {
+    font-size: 3.125rem;
+    padding: 40px 0 0 40px;
+    margin: 0;
+    font-weight: 700;
+    margin: 0; }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 40px 40px 0 0;
+    margin: 0; }
+  .navigation__item {
+    list-style-type: none; }
+  .navigation__link {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    line-height: 28px;
+    color: #ffffff;
+    margin: 0 0 0 60px;
+    opacity: .8;
+    -webkit-transition: .4s all;
+    -o-transition: .4s all;
+    transition: .4s all; }
+    .navigation__link:hover {
+      opacity: 1;
+      text-decoration: line-through; }
+    .navigation__link--active {
+      text-decoration: line-through; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -316,7 +443,8 @@ html {
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #000; }
+  color: #ffffff;
+  background: #ffffff;
+  font-family: 'Lato', sans-serif; }
 
 /*# sourceMappingURL=main.css.map */
