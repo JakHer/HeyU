@@ -10,12 +10,19 @@
     z-index: 10;
     background: #DA0946;
 
+    @media (max-width:900px) {
+        justify-content: space-between;
+    }
+
     &__logo{
         font-size: 3.125rem;
         padding: 40px 0 0 40px ;
         margin: 0;
         font-weight: 700;
         margin: 0;
+        top: 0;
+        left: 0;
+        z-index: 11;
         @media (max-width: 900px) {
             font-size: 2rem;
         }

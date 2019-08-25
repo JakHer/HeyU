@@ -1,6 +1,12 @@
 .navigation{
-    @media (max-width: 900px ){
-        display: none;
+    position: relative;
+    display: flex;
+    @media (max-width: 900px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
     }
     &__list{
         display: flex;
@@ -9,12 +15,26 @@
         align-items: center;
         padding: 40px 40px 0 0 ;
         margin: 0;
-        @media (max-width:800px) {
-            display: none;        
+  
+        @media (max-width: 900px) {
+                display: none;
+                height: 100vh;
+                flex-direction: column;
+                width: 100%;
+                background: #DA0946;
+                justify-content: center;
+                font-size: 2rem;
+                padding: 0;
+                }
+                &--active{
+                    display: flex;
                 }
     }
     &__item{
         list-style-type: none;
+        @media (max-width: 900px) {
+            padding: 20px 0;
+            }
     }
     &__link{
         cursor: pointer;
@@ -26,6 +46,11 @@
         margin: 0 0 0 60px;
         opacity: .8;
         transition: .4s all;
+        @media (max-width: 900px) {
+            font-size: 3rem;
+            padding: 20px 0;
+            margin: 0;
+            }
         &:hover{
             opacity: 1;
             text-decoration: line-through;
@@ -40,6 +65,7 @@
             border: none;
             background-color: transparent;
             border-radius: 10px;
+            z-index: 11;
         }
     }
 
@@ -59,23 +85,53 @@
     height: 2px;
      background: $main;
     transition: transform 220ms ease-in-out;
+
+    &::before,
+    &::after{
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: $main;
+        content: '';
+        top: 0;
+    }
+
+    &::before{
+        top: 10px;
+    }
+
+    &::after{
+        top: -10px;
+    }
   }
 
-.hamburger__bars::before,
-.hamburger__bars::after{
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background: $main;
-  content: '';
-  top: 0;
-}
+  .hamburger, .hamburger__container {
+    &:focus {
+      outline: none;
+    }
+  }
 
-.hamburger__bars::after{
-   top: 10px;
-}
+  
+  .hamburger--active {
+    z-index: 101;
+    background-color: transparent;
+    .hamburger__bars {
+      transform: rotate(225deg);
+      transition: transform 220ms 120ms ease-in-out;
+      &:before {
+        top: 0;
+        transition: top 100ms ease-out;
+        background: #222;
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 100ms ease-out, 
+          transform 220ms 120ms ease-in-out;
+          background: #222;
+      }
+    }
+  }
 
-.hamburger__bars::before{
-    top: -10px;
- }
+ 
