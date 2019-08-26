@@ -1,7 +1,30 @@
 console.log(`Hello world!`);
 
-
 const navButton = document.querySelector(`.navigation__button--js`);
+const header = document.querySelector(`.header__js`);
+const pageHeight = window.pageYOffset;
+
+if (pageHeight === 0) {
+    header.classList.remove(`header--fixed`)
+} else {
+    header.classList.add(`header--fixed`)
+};
+
+const navPosition = () => {
+
+    let pageHeight = window.pageYOffset;
+
+    if (pageHeight > 0) {
+        header.classList.add(`header--fixed`)
+    } else {
+        header.classList.remove(`header--fixed`)
+    };
+
+}
+
+
+
+window.addEventListener(`scroll`, navPosition);
 
 navButton.addEventListener(`click`, menu = () => {
     const hamburger = document.querySelector(`.navigation__list--js`);
@@ -40,4 +63,5 @@ navButton.addEventListener(`click`, menu = () => {
     hamburger.classList.contains(`navigation__list--active`) ?
         animIn() :
         animOut()
-})
+});
+
