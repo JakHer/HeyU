@@ -71,12 +71,18 @@
             padding: 0;
             width: 100%;
             max-width: 420px;
+            @media (max-width: 900px) {
+                margin: 80px 0 40px 0;
+            }
         }
         &--paragraph{
             margin: 50px 0 0 0;
             font-size: 1.5rem;
             font-weight: 300;
             line-height: 28px;
+            @media (max-width: 900px) {
+                margin: 0;
+            }
         }
         &-button{
             margin: 100px 0 0;
@@ -89,7 +95,7 @@
             background-color: $main;
             border: none;
             @media (max-width: 900px) {
-                margin: 100px 30px 200px;
+                margin: 50px 30px 200px;
             }
             &--link{
                 color: #363636;
