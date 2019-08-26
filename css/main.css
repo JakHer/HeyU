@@ -425,7 +425,7 @@ template {
       border: none; }
       @media (max-width: 900px) {
         .header-container__text-button {
-          margin: 50px 30px 200px; } }
+          margin: 50px 20px 200px; } }
       .header-container__text-button--link {
         color: #363636;
         background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
@@ -440,6 +440,9 @@ template {
         font-weight: 700;
         text-decoration: none;
         padding: 20px 50px; }
+        @media (max-width: 900px) {
+          .header-container__text-button--link {
+            padding: 10px 30px; } }
 
 .highlight {
   font-weight: 700; }
