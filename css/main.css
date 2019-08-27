@@ -690,20 +690,20 @@ template {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px); } }
 
-.simple-messaging {
-  margin: 100px 0 0;
+.content__box {
+  margin: 200px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   position: relative; }
-  .simple-messaging__img {
+  .content__box__img {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -718,36 +718,41 @@ template {
     max-width: 530px;
     margin: 0 auto; }
     @media (max-width: 1200px) {
-      .simple-messaging__img {
+      .content__box__img {
         display: none; } }
-    .simple-messaging__img--messages {
-      height: 534px;
+    .content__box__img--messages, .content__box__img--groups {
+      max-height: 534px;
       width: auto; }
-    .simple-messaging__img--conversation {
+    .content__box__img--conversation, .content__box__img--contacts {
       height: 534px;
       width: auto;
       z-index: 2;
       position: absolute;
       top: 4.5rem;
-      left: 40%; }
-  .simple-messaging__article {
+      left: 45%; }
+    .content__box__img--groups {
+      z-index: 1; }
+    .content__box__img--contacts {
+      z-index: 2;
+      left: -10%; }
+  .content__box__article {
     position: relative;
     display: block;
     width: 50%;
     max-width: 550px;
     margin: 0 auto; }
     @media (max-width: 1200px) {
-      .simple-messaging__article {
+      .content__box__article {
         width: 100%;
         padding: 0 40px; } }
-    .simple-messaging__article--heading {
+    .content__box__article--heading {
       font-size: 3.75rem;
       color: #363636;
       font-weight: 700; }
       @media (max-width: 1200px) {
-        .simple-messaging__article--heading {
+        .content__box__article--heading {
           font-size: 2.5rem; } }
-    .simple-messaging__article--paragraph {
+    .content__box__article--paragraph {
       font-size: 1.125rem;
       color: #808080;
       line-height: 32px; }
