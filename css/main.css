@@ -321,7 +321,7 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 1;
-  padding: 40px;
+  padding: 15px 40px;
   background: rgba(1, 1, 1, 0); }
   .header--fixed {
     position: fixed;
@@ -336,7 +336,6 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 10;
-    padding: 40px;
     background: #d90647; }
   @media (max-width: 900px) {
     .header {
@@ -690,6 +689,9 @@ template {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px); } }
 
+.about {
+  border-bottom: 1px solid #e0e0e0; }
+
 .content__box {
   margin: 200px 0 0;
   display: -webkit-box;
@@ -703,6 +705,11 @@ template {
           align-items: center;
   width: 100%;
   position: relative; }
+  .content__box:last-child {
+    margin-bottom: 180px; }
+  @media (max-width: 1200px) {
+    .content__box:last-child {
+      margin: 50px 0; } }
   .content__box__img {
     width: 50%;
     display: -webkit-box;
