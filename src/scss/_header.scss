@@ -38,6 +38,7 @@
         left: 0;
         z-index: 11;
         position: relative;
+        color: $main;
         @media (max-width: 900px) {
             font-size: 1.5rem;
         }
@@ -52,7 +53,7 @@
     background: url("../assets/img/header.svg") center center no-repeat;
     background-size: cover;
     height: 100%;
-    padding: 200px 20px 0 ;
+    padding: 180px 20px 0 ;
 
     @media (max-width: 900px) {
         padding: 40px 20px 0;
@@ -84,6 +85,7 @@
             padding: 0;
             width: 100%;
             max-width: 420px;
+            color: $main;
             @media (max-width: 900px) {
                 margin: 80px 0 40px 0;
                 font-size: 3rem;
@@ -94,6 +96,7 @@
             font-size: 1.5rem;
             font-weight: 300;
             line-height: 28px;
+            color: $main;
             @media (max-width: 900px) {
                 margin: 0;
                 font-size: 1rem;
