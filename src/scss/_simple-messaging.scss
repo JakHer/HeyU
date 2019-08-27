@@ -1,7 +1,7 @@
-.simple-messaging{
-    margin: 100px 0 0;
+.content__box{
+    margin: 200px 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     position: relative;
@@ -17,16 +17,25 @@
             display: none;
         }
         &--messages{
-            height: 534px;
+            max-height: 534px;
             width: auto;
         }
-        &--conversation{
+        &--conversation {
             height: 534px;
             width: auto;;
             z-index: 2;
             position: absolute;
             top: 4.5rem;
-            left: 40%;
+            left: 45%;
+        }
+        &--groups{
+            @extend .content__box__img--messages;
+            z-index: 1;
+                }
+        &--contacts{
+            @extend .content__box__img--conversation;
+            z-index: 2;
+            left:-10%;
         }
     }
     &__article{
