@@ -436,14 +436,18 @@ template {
       /* Style for "Rounded Re" */
       max-width: 300px;
       height: 50px;
-      -webkit-box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
-              box-shadow: 0 10px 40px rgba(54, 54, 54, 0.15);
       border-radius: 25px;
       background-color: #ffffff;
-      border: none; }
+      border: none;
+      -webkit-transition: .4s ease box-shadow;
+      -o-transition: .4s ease box-shadow;
+      transition: .4s ease box-shadow; }
       @media (max-width: 900px) {
         .header-container__text-button {
           margin: 50px 20px 200px; } }
+      .header-container__text-button:hover {
+        -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3); }
       .header-container__text-button--link {
         color: #363636;
         background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
@@ -456,11 +460,36 @@ template {
         text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
         font-size: 1.125rem;
         font-weight: 700;
-        text-decoration: none;
-        padding: 20px 50px; }
+        text-decoration: line-through;
+        padding: 20px 50px;
+        -webkit-transition: .4s ease all;
+        -o-transition: .4s ease all;
+        transition: .4s ease all;
+        position: relative; }
         @media (max-width: 900px) {
           .header-container__text-button--link {
             padding: 10px 30px; } }
+        .header-container__text-button--link::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background: #ed1f4c;
+          z-index: 100;
+          -webkit-transition: .4s ease all;
+          -o-transition: .4s ease all;
+          transition: .4s ease all; }
+        .header-container__text-button--link:hover::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: #ed1f4c;
+          z-index: 100; }
 
 .highlight {
   font-weight: 700; }
@@ -708,6 +737,8 @@ template {
   .content__box:last-child {
     margin-bottom: 180px; }
   @media (max-width: 1200px) {
+    .content__box:nth-child(1) {
+      margin: 50px 0; }
     .content__box:last-child {
       margin: 50px 0; } }
   .content__box__img {
