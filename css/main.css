@@ -819,7 +819,8 @@ template {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  border-bottom: 1px solid #e0e0e0; }
 
 .container-faq {
   display: -webkit-box;
@@ -835,9 +836,12 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 50px auto 0;
+  margin: 100px auto 120px;
   max-width: 1500px;
   width: 100%; }
+  @media (max-width: 1200px) {
+    .container-faq {
+      margin: 50px auto; } }
   .container-faq__heading {
     font-size: 3.75rem;
     color: #363636;
@@ -873,7 +877,8 @@ template {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    position: relative; }
     @media (max-width: 1200px) {
       .container-faq__box {
         width: 100%; } }
@@ -883,10 +888,42 @@ template {
       background-color: #ffffff;
       border: 1px solid #e0e0e0;
       max-width: 550px;
-      margin: 0 10px; }
+      margin: 0 10px;
+      position: relative; }
       @media (max-width: 1200px) {
         .container-faq__box .box-content {
           margin: 0; } }
+      .container-faq__box .box-content:hover {
+        border-color: transparent;
+        -webkit-transform: translate(0, -40px);
+            -ms-transform: translate(0, -40px);
+                transform: translate(0, -40px);
+        -webkit-box-shadow: 0 20px 40px 0 #d7d7d7;
+                box-shadow: 0 20px 40px 0 #d7d7d7; }
+        @media (max-width: 1200px) {
+          .container-faq__box .box-content:hover {
+            -webkit-transform: translate(0, -5px);
+                -ms-transform: translate(0, -5px);
+                    transform: translate(0, -5px); } }
+      .container-faq__box .box-content::after, .container-faq__box .box-content::before {
+        content: '';
+        height: 0;
+        width: 0;
+        top: 100%;
+        left: 10%;
+        border: solid transparent;
+        position: absolute;
+        pointer-events: none; }
+      .container-faq__box .box-content::after {
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+        border-width: 12px;
+        margin-left: -12px; }
+      .container-faq__box .box-content::before {
+        border-color: rgba(0, 0, 0, 0);
+        border-top-color: #e0e0e0;
+        border-width: 13px;
+        margin-left: -13px; }
       .container-faq__box .box-content__paragraph {
         line-height: 32px;
         font-size: 1.125rem;
