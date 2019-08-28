@@ -58,7 +58,6 @@
         padding: 40px 20px 0;
     }
 
-    
     &__img{
         /* Style for "iPhone 7 S" */
         height: 750px;
@@ -105,57 +104,55 @@
         &-button{
             margin: 100px 0 0;
             padding: 0;
-            /* Style for "Rounded Re" */
             max-width: 300px;
             height: 50px;
             border-radius: 25px;
             background-color: $main;
             border: none;
             transition: .4s ease box-shadow;
+            color: #363636;
+            background: $main;
+            text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+            font-size: 1.125rem;
+            font-weight: 700;
+            padding: 20px 50px;
+            transition: .4s ease all;
+            position: relative;
+            text-decoration: none;
+            color: $red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 900px) {
+                padding: 10px 30px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 2px;
+                width: 0;
+                background: $red;
+                z-index: 100;
+                transition: .4s ease all;
+            }
+            &:hover::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background: $red;
+                z-index: 100;
+            }
             
             @media (max-width: 900px) {
                 margin: 50px 20px 200px;
             }
             &:hover{
                 box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
-            }
-            &--link{
-                color: #363636;
-                background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
-                font-size: 1.125rem;
-                font-weight: 700;
-                text-decoration: line-through;
-                padding: 20px 50px;
-                transition: .4s ease all;
-                position: relative;
-                @media (max-width: 900px) {
-                    padding: 10px 30px;
-                }
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    height: 2px;
-                    width: 0;
-                    background: $red;
-                    z-index: 100;
-                    transition: .4s ease all;
-                }
-                &:hover::before{
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    height: 2px;
-                    width: 100%;
-                    background: $red;
-                    z-index: 100;
-                }
             }
         }
     }
