@@ -1,5 +1,10 @@
 .about{
     border-bottom: 1px solid #e0e0e0;
+    &__container{
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 .content__box{
     margin: 200px 0 0;
@@ -33,21 +38,15 @@
         @media (max-width: 1200px) {
             display: none;
         }
-        &--messages{
-            max-height: 534px;
-            width: auto;
-        }
         &--conversation {
-            height: 534px;
-            width: auto;;
             z-index: 2;
             position: absolute;
             top: 4.5rem;
-            left: 45%;
+            left: 35%;
         }
         &--groups{
-            @extend .content__box__img--messages;
             z-index: 1;
+            box-shadow: 0 30px 40px rgba(54, 54, 54, 0.2);
                 }
         &--contacts{
             @extend .content__box__img--conversation;
