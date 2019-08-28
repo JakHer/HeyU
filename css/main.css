@@ -720,6 +720,10 @@ template {
 
 .about {
   border-bottom: 1px solid #e0e0e0; }
+  .about__container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto; }
 
 .content__box {
   margin: 200px 0 0;
@@ -758,18 +762,21 @@ template {
     @media (max-width: 1200px) {
       .content__box__img {
         display: none; } }
-    .content__box__img--messages, .content__box__img--groups {
-      max-height: 534px;
-      width: auto; }
+    .content__box__img--messages {
+      z-index: 1; }
+      .content__box__img--messages:hover {
+        z-index: 3; }
     .content__box__img--conversation, .content__box__img--contacts {
-      height: 534px;
-      width: auto;
       z-index: 2;
       position: absolute;
       top: 4.5rem;
-      left: 45%; }
+      left: 35%; }
     .content__box__img--groups {
-      z-index: 1; }
+      z-index: 1;
+      -webkit-box-shadow: 0 30px 40px rgba(54, 54, 54, 0.2);
+              box-shadow: 0 30px 40px rgba(54, 54, 54, 0.2); }
+      .content__box__img--groups:hover {
+        z-index: 3; }
     .content__box__img--contacts {
       z-index: 2;
       left: -10%; }
