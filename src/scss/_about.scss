@@ -1,10 +1,11 @@
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .about{
     border-bottom: 1px solid #e0e0e0;
-    &__container{
-        max-width: 1500px;
-        width: 100%;
-        margin: 0 auto;
-    }
 }
 .content__box{
     margin: 200px 0 0;
@@ -14,7 +15,7 @@
     width: 100%;
     position: relative;
     &:last-child{
-        margin-bottom: 180px;
+        margin-bottom: 250px;
     }
    
         @media (max-width: 1200px) {
@@ -38,6 +39,12 @@
         @media (max-width: 1200px) {
             display: none;
         }
+        &--messages{
+            z-index: 1;
+            &:hover{
+                z-index: 3;
+            }
+        }
         &--conversation {
             z-index: 2;
             position: absolute;
@@ -47,7 +54,10 @@
         &--groups{
             z-index: 1;
             box-shadow: 0 30px 40px rgba(54, 54, 54, 0.2);
-                }
+            &:hover{
+                z-index: 3;
+            }
+        }
         &--contacts{
             @extend .content__box__img--conversation;
             z-index: 2;
