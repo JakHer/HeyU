@@ -1,7 +1,4 @@
 .faq{
-    margin: 100px 0;
-    padding: 0 40px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,6 +10,9 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin: 50px auto 0;
+        max-width: 1500px;
+        width: 100%;
         &__heading{
             font-size: 3.75rem;
             color: $black;
@@ -21,34 +21,81 @@
                 font-size: 2.5rem;
              }
         }
+        &__wrapper{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            @media (max-width:1200px){
+                flex-direction: column;
+                padding: 0px 40px;
+                max-width: 550px;
+            }
+        }
         &__box{
             width: 30%;
             display: flex;
             flex-direction: column;
-            @media (max-width: 900px) {
-                flex-direction: row;
+            @media (max-width: 1200px) {
+                width: 100%;
             }
-            .box__content{
+            .box-content{
                 box-shadow: 0 30px 60px rgba(54, 54, 54, 0.15);
                 background-color: $main;
                 border: 1px solid $border-grey;
-
-                &--paragraph{
+                max-width: 550px;
+                margin: 0 10px;
+                @media (max-width: 1200px) {
+                    margin: 0;
+                }
+                &__paragraph{
                     line-height: 32px;
                     font-size: 1.125rem;
                     color: $grey;
-                    padding: 25px;
-                    @media (max-width: 900px) {
+                    padding: 10px 25px;
+                    @media (max-width: 1200px) {
                         font-size: 1rem;
                     }
+                    &--link{
+                        color: $red;
+                        text-decoration: none;
+                        font-weight: 700;
+                        letter-spacing: 1.08px;
+                        line-height: 28px;
+                    }
             }
-            &--link{
-                color: $red;
-                text-decoration: none;
-                background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
-                background-clip: text;
-                color: $red;
-                padding: 0 0 25px 25px;
+
+        }
+        .box-author{
+            display: flex;
+            margin: 30px 10px;
+            justify-content: flex-start;
+            align-items: center;
+            &__list{
+                list-style-type: none;
+            }
+            &__item{
+                &--name{
+                    margin: 0;
+                    padding: 0;
+                    color: #363636;
+                    font-size: 1.125rem;
+                    line-height: 32px;
+                    letter-spacing: 1.08px;
+                    font-weight: 700;
+                }
+                &--position{
+                    margin: 0;
+                    padding: 0;
+                    color: #667386;
+                    font-size: 1rem;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.96px;
+                    font-weight: 700;
+                }
             }
         }
     }
