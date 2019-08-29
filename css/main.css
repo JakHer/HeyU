@@ -891,7 +891,10 @@ template {
       border: 1px solid #e0e0e0;
       max-width: 550px;
       margin: 0 10px;
-      position: relative; }
+      position: relative;
+      -webkit-transition: .4s ease all;
+      -o-transition: .4s ease all;
+      transition: .4s ease all; }
       @media (max-width: 1200px) {
         .container-faq__box .box-content {
           margin: 0; } }
@@ -944,7 +947,7 @@ template {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin: 30px 10px;
+      margin: 50px 10px;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
