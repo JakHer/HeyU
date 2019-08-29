@@ -8,6 +8,14 @@
 display: flex;
 flex-direction: column;
 margin: 0 10px;
+&__icon{
+    @media (max-width:1200px) {
+        flex-direction: column;
+        align-items: center;
+        order: -1;
+        padding: 10px 0 30px ;
+    }
+}
     &__wrapper{
         display: flex;
         flex-direction: row;
@@ -15,7 +23,59 @@ margin: 0 10px;
         width: 100%;
         margin: 0 auto;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        padding: 0 0 70px 0;
+        @media (max-width:1200px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 40px 0;
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 40px 0 0;
+        @media (max-width:1200px) {
+            padding: 0;
+        }
+        &--reverse{
+            align-items: flex-start;
+            padding: 0 0 0 40px;
+            @media (max-width:1200px) {
+                padding: 0;
+            }
+        }
+        &--header{
+            line-height: 33.6px;
+            letter-spacing: 1.44px;
+            font-size: 1.5rem;
+            color: $main;
+            margin: 5px 0;
+            @media (max-width:1200px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &--paragraph{
+            color: $main;
+            letter-spacing: 0.96px;
+            line-height: 28px;
+            font-size: 1rem;
+            opacity: 0.6;
+            text-align: end;
+            @media (max-width:1200px) {
+                text-align: center;
+            }
+            &--reverse{
+                text-align: start;
+                @media (max-width:1200px) {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 
@@ -28,4 +88,9 @@ margin: 0 10px;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 120px 0 0;
+    @media (max-width:1200px) {
+        flex-direction: column;
+        padding: 50px 40px;
+    }
 }
