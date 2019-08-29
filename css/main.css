@@ -821,8 +821,7 @@ template {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid #e0e0e0; }
+          align-items: center; }
 
 .container-faq {
   display: -webkit-box;
@@ -973,6 +972,59 @@ template {
         text-transform: uppercase;
         letter-spacing: 0.96px;
         font-weight: 700; }
+
+.blog {
+  background: #bcbcbc;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
+  background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+  background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+  background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+  margin: 200px 0 0; }
+
+.container-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px; }
+  .container-box__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.group-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 
 html {
   -webkit-box-sizing: border-box;
