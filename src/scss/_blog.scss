@@ -1,0 +1,31 @@
+.blog{
+    background: #bcbcbc;
+    background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+    margin: 200px 0 0;
+}
+
+.container-box{
+display: flex;
+flex-direction: column;
+margin: 0 10px;
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.group-container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
