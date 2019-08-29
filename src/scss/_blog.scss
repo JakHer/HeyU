@@ -2,12 +2,54 @@
     background: #bcbcbc;
     background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
     margin: 200px 0 0;
+
+
 }
 
 .container-box{
 display: flex;
 flex-direction: column;
 margin: 0 10px;
+
+&__image{
+    position: relative;
+}
+
+&-img{
+    position: relative;
+    top: 0;
+    left: 50%;
+    height: 735px;
+    transform: translate(-50%, -82px);
+    z-index: 1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(60px, 83px);
+        height: 520px;
+        width: 294px;
+        background: #111;
+        z-index: 1;
+        opacity: 0.6;
+    }
+    &::before{
+        content: url('../assets/img/play-circle.png');
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+    }
+}
+
 &__icon{
     @media (max-width:1200px) {
         flex-direction: column;
@@ -82,6 +124,7 @@ margin: 0 10px;
 
 .group-container{
     max-width: 1200px;
+    height: 520px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -89,8 +132,10 @@ margin: 0 10px;
     align-items: center;
     flex-direction: row;
     padding: 120px 0 0;
+    position: relative;
     @media (max-width:1200px) {
         flex-direction: column;
         padding: 50px 40px;
+        height: auto;
     }
 }
