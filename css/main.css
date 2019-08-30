@@ -979,7 +979,10 @@ template {
   background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
   background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
   background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
-  margin: 200px 0 0; }
+  margin: 200px 0; }
+  @media (max-width: 1200px) {
+    .blog {
+      margin: 30px 0; } }
 
 .container-box {
   display: -webkit-box;
@@ -1186,6 +1189,126 @@ template {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
+
+.subscribe-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 100px auto;
+  padding: 0 40px; }
+  @media (max-width: 1200px) {
+    .subscribe-container {
+      margin: 0 auto;
+      margin-bottom: 50px; } }
+  .subscribe-container__heading {
+    font-weight: 700;
+    color: #363636;
+    font-size: 3.75rem;
+    margin-bottom: 50px; }
+    @media (max-width: 900px) {
+      .subscribe-container__heading {
+        margin-top: 50px;
+        font-size: 3rem; } }
+  .subscribe-container__paragraph {
+    line-height: 32px;
+    font-size: 1.125rem;
+    color: #808080;
+    margin-bottom: 70px; }
+    @media (max-width: 900px) {
+      .subscribe-container__paragraph {
+        margin-top: 0;
+        margin-bottom: 40px; } }
+  .subscribe-container__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    background: #f8f8f8;
+    border-radius: 25px; }
+    @media (max-width: 900px) {
+      .subscribe-container__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        background: none;
+        margin-top: 0; } }
+    .subscribe-container__form .input {
+      border: none;
+      border-radius: 25px;
+      padding: 15px;
+      width: 100%;
+      background: inherit; }
+      .subscribe-container__form .input:focus + .label {
+        -webkit-transform: translateY(-40px);
+            -ms-transform: translateY(-40px);
+                transform: translateY(-40px);
+        color: #ed1f4c; }
+      .subscribe-container__form .input:not(:placeholder-shown) + .label,
+      .subscribe-container__form .input:focus:not(:placeholder-shown) + .label {
+        -webkit-transform: translateY(-40px);
+            -ms-transform: translateY(-40px);
+                transform: translateY(-40px);
+        color: #ed1f4c; }
+      @media (max-width: 900px) {
+        .subscribe-container__form .input {
+          background: #f8f8f8;
+          margin-bottom: 10px; } }
+    .subscribe-container__form .label {
+      position: absolute;
+      font-size: 1.125rem;
+      color: #808080;
+      left: 30px;
+      pointer-events: none;
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      -webkit-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in; }
+      @media (max-width: 900px) {
+        .subscribe-container__form .label {
+          top: 15px;
+          left: 15px; } }
+    .subscribe-container__form .button {
+      -webkit-box-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+              box-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
+      border-radius: 25px;
+      background-color: #ffffff;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
+      background-image: -webkit-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+      background-image: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
+      background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
+      border: none;
+      color: #ffffff;
+      max-width: 200px;
+      padding: 15px 50px;
+      cursor: pointer; }
+      @media (max-width: 900px) {
+        .subscribe-container__form .button {
+          margin-top: 20px; } }
 
 html {
   -webkit-box-sizing: border-box;
