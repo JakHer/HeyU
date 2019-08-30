@@ -1012,9 +1012,14 @@ template {
         -ms-flex-align: center;
             align-items: center;
     position: absolute; }
-    @media (max-width: 1200px) {
+    @media (max-width: 900px) {
       .container-box-img {
         display: none; } }
+    @media (max-width: 1200px) {
+      .container-box-img {
+        position: absolute;
+        top: 30%;
+        left: 145%; } }
     .container-box-img::after {
       content: '';
       position: absolute;
@@ -1032,7 +1037,9 @@ template {
       content: url("../assets/img/play-circle.png");
       position: absolute;
       z-index: 2;
-      cursor: pointer; }
+      cursor: pointer;
+      left: 42%;
+      top: 43%; }
   @media (max-width: 1200px) {
     .container-box__icon {
       -webkit-box-orient: vertical;
@@ -1158,7 +1165,27 @@ template {
           -ms-flex-direction: column;
               flex-direction: column;
       padding: 50px 40px;
-      height: auto; } }
+      height: auto;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 50%;
+      margin: 0; } }
+  @media (max-width: 900px) {
+    .group-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 50px 40px;
+      height: auto;
+      width: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 html {
   -webkit-box-sizing: border-box;
