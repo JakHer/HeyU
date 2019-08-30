@@ -2,6 +2,9 @@
     background: #bcbcbc;
     background-image: linear-gradient(to top, #eb402c 0%, #d90647 100%);
     margin: 200px 0;
+    @media (max-width: 1200px) {
+        margin: 30px 0;
+    }
 }
 
 .container-box{
