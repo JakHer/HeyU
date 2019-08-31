@@ -1193,6 +1193,7 @@ template {
 .youtube-video {
   display: none; }
   .youtube-video--active {
+    border: none;
     display: block;
     position: absolute;
     top: 0;
