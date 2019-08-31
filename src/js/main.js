@@ -3,6 +3,12 @@ console.log(`Hello world!`);
 const navButton = document.querySelector(`.navigation__button--js`);
 const header = document.querySelector(`.header__js`);
 const pageHeight = window.pageYOffset;
+const youtubePlay = document.querySelector(`.container-box-img`, `::before`);
+const youtubeActive = document.querySelector(`.youtube-video`);
+
+youtubePlay.addEventListener(`click`, () => {
+    youtubeActive.classList.add(`youtube-video--active`)
+});
 
 if (pageHeight === 0) {
     header.classList.remove(`header--fixed`)

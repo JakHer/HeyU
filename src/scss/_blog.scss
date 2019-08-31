@@ -159,3 +159,17 @@ margin: 0 10px;
         align-items: center;
     }
 }
+
+.youtube-video{
+    display: none;
+    &--active{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(60px, 83px);
+        height: 520px;
+        width: 294px;
+        z-index: 10;
+    }
+}
