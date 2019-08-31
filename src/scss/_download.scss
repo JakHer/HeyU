@@ -1,0 +1,33 @@
+.download-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    &__logo{
+        width: auto;
+        max-height: 210px;
+        @media (max-width: 900px) {
+            max-height: 150px;
+        }
+    }
+
+    &__heading{
+        font-size:  3.75rem;
+        padding: 60px 40px 40px;
+        margin: 0;
+        @media (max-width: 900px) {
+            font-size: 2rem;
+        }
+    }
+    &__paragraph{
+        margin-bottom: 60px;
+        padding: 0 40px;
+    }
+    &__appstore{
+        padding-bottom: 150px;
+        @media (max-width: 900px) {
+            padding-bottom: 50px;
+        }
+    }
+}

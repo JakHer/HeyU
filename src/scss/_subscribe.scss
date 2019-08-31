@@ -5,10 +5,10 @@
     flex-direction: column;
     margin: 100px auto;
     padding: 0 40px;
+    border-bottom: 1px solid #e0e0e0;
     @media (max-width: 1200px) {
         margin: 0 auto;
         margin-bottom: 50px;
-        
     }
     &__heading{
         font-weight: 700;
@@ -17,7 +17,7 @@
         margin-bottom: 50px;
         @media (max-width: 900px) {
             margin-top: 50px;
-            font-size: 3rem;
+            font-size: 2.5rem;
             
         }
     }
@@ -41,10 +41,12 @@
         margin: 0 auto;
         background: $label;
         border-radius: 25px;
+        margin-bottom: 140px;
         @media (max-width: 900px) {
             flex-direction: column;
             background: none;
             margin-top: 0;
+            margin-bottom: 50px;
         }
         .input{
             border: none;
