@@ -163,6 +163,7 @@ margin: 0 10px;
 .youtube-video{
     display: none;
     &--active{
+        border: none;
         display: block;
         position: absolute;
         top: 0;

@@ -7,7 +7,7 @@ const youtubePlay = document.querySelector(`.container-box-img`, `::before`);
 const youtubeActive = document.querySelector(`.youtube-video`);
 
 youtubePlay.addEventListener(`click`, () => {
-    youtubeActive.classList.add(`youtube-video--active`)
+    youtubeActive.classList.add(`youtube-video--active`);
 });
 
 if (pageHeight === 0) {
