@@ -7,8 +7,12 @@
     &__logo{
         width: auto;
         max-height: 210px;
+        transition: .4s ease all;
         @media (max-width: 900px) {
             max-height: 150px;
+        }
+        &:hover{
+            filter: drop-shadow(0 10px 20px rgb(217, 6, 71));
         }
     }
 
@@ -23,9 +27,12 @@
     &__paragraph{
         margin-bottom: 60px;
         padding: 0 40px;
+        line-height: 32px;
+        color: $grey;
     }
     &__appstore{
         padding-bottom: 150px;
+        cursor: pointer;
         @media (max-width: 900px) {
             padding-bottom: 50px;
         }
