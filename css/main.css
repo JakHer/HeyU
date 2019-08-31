@@ -1205,7 +1205,8 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 100px auto;
-  padding: 0 40px; }
+  padding: 0 40px;
+  border-bottom: 1px solid #e0e0e0; }
   @media (max-width: 1200px) {
     .subscribe-container {
       margin: 0 auto;
@@ -1218,7 +1219,7 @@ template {
     @media (max-width: 900px) {
       .subscribe-container__heading {
         margin-top: 50px;
-        font-size: 3rem; } }
+        font-size: 2.5rem; } }
   .subscribe-container__paragraph {
     line-height: 32px;
     font-size: 1.125rem;
@@ -1243,7 +1244,8 @@ template {
     width: 100%;
     margin: 0 auto;
     background: #f8f8f8;
-    border-radius: 25px; }
+    border-radius: 25px;
+    margin-bottom: 140px; }
     @media (max-width: 900px) {
       .subscribe-container__form {
         -webkit-box-orient: vertical;
@@ -1251,7 +1253,8 @@ template {
             -ms-flex-direction: column;
                 flex-direction: column;
         background: none;
-        margin-top: 0; } }
+        margin-top: 0;
+        margin-bottom: 50px; } }
     .subscribe-container__form .input {
       border: none;
       border-radius: 25px;
@@ -1309,6 +1312,43 @@ template {
       @media (max-width: 900px) {
         .subscribe-container__form .button {
           margin-top: 20px; } }
+
+.download-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e0e0e0; }
+  .download-container__logo {
+    width: auto;
+    max-height: 210px; }
+    @media (max-width: 900px) {
+      .download-container__logo {
+        max-height: 150px; } }
+  .download-container__heading {
+    font-size: 3.75rem;
+    padding: 60px 40px 40px;
+    margin: 0; }
+    @media (max-width: 900px) {
+      .download-container__heading {
+        font-size: 2rem; } }
+  .download-container__paragraph {
+    margin-bottom: 60px;
+    padding: 0 40px; }
+  .download-container__appstore {
+    padding-bottom: 150px; }
+    @media (max-width: 900px) {
+      .download-container__appstore {
+        padding-bottom: 50px; } }
 
 html {
   -webkit-box-sizing: border-box;
