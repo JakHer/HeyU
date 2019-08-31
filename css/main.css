@@ -1330,10 +1330,16 @@ template {
   border-bottom: 1px solid #e0e0e0; }
   .download-container__logo {
     width: auto;
-    max-height: 210px; }
+    max-height: 210px;
+    -webkit-transition: .4s ease all;
+    -o-transition: .4s ease all;
+    transition: .4s ease all; }
     @media (max-width: 900px) {
       .download-container__logo {
         max-height: 150px; } }
+    .download-container__logo:hover {
+      -webkit-filter: drop-shadow(0 10px 20px #d90647);
+              filter: drop-shadow(0 10px 20px #d90647); }
   .download-container__heading {
     font-size: 3.75rem;
     padding: 60px 40px 40px;
@@ -1343,9 +1349,12 @@ template {
         font-size: 2rem; } }
   .download-container__paragraph {
     margin-bottom: 60px;
-    padding: 0 40px; }
+    padding: 0 40px;
+    line-height: 32px;
+    color: #808080; }
   .download-container__appstore {
-    padding-bottom: 150px; }
+    padding-bottom: 150px;
+    cursor: pointer; }
     @media (max-width: 900px) {
       .download-container__appstore {
         padding-bottom: 50px; } }
